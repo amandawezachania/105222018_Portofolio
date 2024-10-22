@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<hmtl lang="id"></hmtl>
+<html lang="id">
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Sederhana - Lana Del Rey</title>
+    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan ke file CSS -->
 </head>
 <body>
     <!-- Header -->
     <header>
         <h1>Selamat Datang di Blog Musik Lana Del Rey</h1>
         <p>Blog ini berisi tentang musik dan video dari Lana Del Rey.</p>
+        <nav>
+            <ul>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#form">Form Sederhana</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Section 1: Artikel -->
-    <section>
+    <section id="artikel">
         <h2>Artikel Terbaru</h2>
         <p>Lana Del Rey adalah salah satu penyanyi paling ikonik dengan suara khas dan lagu-lagu yang menyentuh hati. Salah satu karyanya yang terkenal adalah lagu <em>"Young and Beautiful"</em>, yang juga menjadi soundtrack film <strong>The Great Gatsby</strong>.</p>
     </section>
 
     <!-- Section 2: Multimedia -->
-    <section>
+    <section id="multimedia">
         <h2>Multimedia</h2>
 
         <!-- Audio -->
@@ -32,20 +40,39 @@
         <!-- Video -->
         <h3>Video: Lana Del Rey</h3>
         <video controls width="400">
-            <source src="Lana Del Rey.mp4" type="video/mp4">
+            <source src="Lana Del Reyy.mp4" type="video/mp4">
             Browser Anda tidak mendukung elemen video.
         </video>
     </section>
 
     <!-- Section 3: Form Sederhana -->
-    <section>
+    <section id="form">
         <h2>Form Sederhana</h2>
         <form action="#" method="post">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required><br><br>
 
+            <label for="age">Umur:</label>
+            <input type="number" id="age" name="age" min="1" required><br><br>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
+
+            <label for="gender">Jenis Kelamin:</label><br>
+            <input type="radio" id="male" name="gender" value="Laki-laki">
+            <label for="male">Laki-laki</label><br>
+            <input type="radio" id="female" name="gender" value="Perempuan">
+            <label for="female">Perempuan</label><br><br>
+
+            <label for="music">Pilih Genre Musik Favorit:</label>
+            <select id="music" name="music">
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="jazz">Jazz</option>
+            </select><br><br>
+
+            <label for="updates">Ingin menerima update:</label>
+            <input type="checkbox" id="updates" name="updates" value="yes"><br><br>
 
             <label for="message">Pesan:</label><br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
@@ -56,7 +83,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>Copyright &copy; 2024 Blog Musik Lana Del Rey. Dikumpul pada tanggal 16/10/2024 jam 12.00.</p>
+        <p>&copy; 2024 Blog Musik Lana Del Rey. Dikumpul pada tanggal 16/10/2024 jam 12.00.</p>
     </footer>
 </body>
 </html>

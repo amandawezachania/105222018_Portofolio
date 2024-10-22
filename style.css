@@ -1,0 +1,78 @@
+/* Penerapan CSS Box Model */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #a7155e;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow sebagai bagian dari box-model */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Pseudo-class hover */
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Pseudo-class */
+a {
+    color: #a7155e;
+}
+
+a:hover {
+    color: #a7155e; /* Pseudo-class hover */
+}
+
+/* Pseudo-element */
+h1::before {
+    content: "🎵 "; /* Pseudo-element before */
+}
+
+h2::after {
+    content: " 🎤"; /* Pseudo-element after */
+}
+
+/* CSS Selector */
+form input[type="text"], form input[type="email"], form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box; /* Penerapan box-model */
+}
+
+button {
+    background-color: #a7155e;
+    color: rgb(255, 255, 232);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a7155e; /* Pseudo-class hover */
+}
