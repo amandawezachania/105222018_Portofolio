@@ -1,26 +1,35 @@
-/* Penerapan CSS Box Model */
-body {
-    font-family: Arial, sans-serif;
+/* Reset margin dan padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Gaya body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Header */
 header {
     background-color: #a7155e;
+    color: white;
     padding: 20px;
     text-align: center;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow sebagai bagian dari box-model */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -29,50 +38,76 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Pseudo-class hover */
+    text-decoration: underline;
 }
 
+/* Section */
 section {
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Pseudo-class */
-a {
+section h2 {
     color: #a7155e;
+    margin-bottom: 10px;
 }
 
-a:hover {
-    color: #a7155e; /* Pseudo-class hover */
+/* Grid Layout for Portofolio */
+#portofolio .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-/* Pseudo-element */
-h1::before {
-    content: "🎵 "; /* Pseudo-element before */
+.grid-item {
+    padding: 20px;
+    border: 2px solid #a7155e;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 5px;
 }
 
-h2::after {
-    content: " 🎤"; /* Pseudo-element after */
+/* Multimedia Container */
+.audio-container, .video-container {
+    margin-bottom: 15px;
 }
 
-/* CSS Selector */
-form input[type="text"], form input[type="email"], form input[type="number"] {
+/* Form styling */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box; /* Penerapan box-model */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 button {
     background-color: #a7155e;
-    color: rgb(255, 255, 232);
+    color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #a7155e; /* Pseudo-class hover */
+    background-color: #880046;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
 }
