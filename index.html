@@ -4,93 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Amanda Weza Chania</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-custom { background-color: #a7155e; }
+        .border-custom { border-color: #a7155e; }
+        .text-custom { color: #a7155e; }
+        .hover-bg-custom:hover { background-color: #880046; }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header>
-        <h1>Selamat Datang di Portofolio Amanda Weza Chania</h1>
+    <header class="bg-custom text-white text-center py-6">
+        <h1 class="text-2xl font-bold">Selamat Datang di Portofolio Amanda Weza Chania</h1>
         <p>Blog ini berisi tentang informasi mengenai Amanda Weza Chania.</p>
-        <nav>
-            <ul>
-                <li><a href="#Profile">Profile</a></li>
-                <li><a href="#multimedia">Multimedia</a></li>
-                <li><a href="#portofolio">Portofolio</a></li>
-                <li><a href="#form">Feedback</a></li>
+        <nav class="bg-custom py-4">
+            <ul class="flex justify-center space-x-4 text-white">
+                <li><a href="#Profile" class="hover:underline">Profile</a></li>
+                <li><a href="#multimedia" class="hover:underline">Multimedia</a></li>
+                <li><a href="#portofolio" class="hover:underline">Portofolio</a></li>
+                <li><a href="#form" class="hover:underline">Feedback</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Section 1: Artikel -->
-    <section id="Profile">
-        <h2>Profile Terbaru</h2>
+    <!-- Profile Section -->
+    <section id="Profile" class="max-w-2xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-custom text-xl font-semibold mb-3">Profile Terbaru</h2>
         <p>Amanda Weza Chania, Seorang mahasiswa ilmu komputer angkatan 2022 di Universitas pertamina. Berasal dari latar belakang yang penuh semangat untuk belajar dan mengeksplorasi teknologi, Weza selalu terdorong untuk memahami lebih dalam mengenai perkembangan dunia digital, khususnya dalam bidang dunia pemograman web. Weza bercita-cita untuk menjadi seorang web developer yang tidak hanya mahir dalam teknis, tetapi juga mampu menciptakan solusi-solusi digital yang bermanfaat bagi masyarakat.</p>
     </section>
 
-    <!-- Section 2: Multimedia -->
-    <section id="multimedia">
-        <h2>Multimedia</h2>
-       <!-- Audio -->
-       <h3>Audio: Young and Beautiful</h3>
-       <audio controls>
-           <source src="Lana Del Rey - Young and Beautiful.mp3" type="audio/mpeg">
-           Browser Anda tidak mendukung elemen audio.
-       </audio>
-        </div>
-        <!-- Video -->
-        <div class="video-container">
-            <h3>Video: Lana Del Rey (belom punya video sendiri bang, maap)</h3>
-            <video controls width="400">
-                <source src="Lana Del Rey.mp4" type="video/mp4">
-                Browser Anda tidak mendukung elemen video.
-            </video>
+    <!-- Multimedia Section -->
+    <section id="multimedia" class="max-w-2xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-custom text-xl font-semibold mb-3">Multimedia</h2>
+        <h3 class="text-lg font-medium">Audio: Young and Beautiful</h3>
+        <audio controls class="w-full mt-2">
+            <source src="Lana Del Rey - Young and Beautiful.mp3" type="audio/mpeg">
+        </audio>
+        <h3 class="text-lg font-medium mt-6">Video: Lana Del Rey</h3>
+        <video controls class="w-full mt-2">
+            <source src="Lana Del Reyy.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portofolio" class="max-w-2xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-custom text-xl font-semibold mb-3">Portofolio</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 border border-custom text-center bg-gray-50 rounded">Panitia CITE UP 2023</div>
+            <div class="p-4 border border-custom text-center bg-gray-50 rounded">Panitia CITE UP 2024</div>
+            <div class="p-4 border border-custom text-center bg-gray-50 rounded">Sekretaris Departemen Eksternal HMIK</div>
+            <div class="p-4 border border-custom text-center bg-gray-50 rounded">Peserta lomba LIDM</div>
+            <div class="p-4 border border-custom text-center bg-gray-50 rounded">Head of Division Public Relation Space UP7.0</div>
+            <div class="p-4 border border-custom text-center bg-gray-50 rounded">Panitia AOT 2024</div>
         </div>
     </section>
 
-    <!-- Section 3: Portofolio -->
-    <section id="portofolio">
-        <h2>Portofolio</h2>
-        <div class="grid-container">
-            <div class="grid-item">Panitia CITE UP 2023</div>
-            <div class="grid-item">Panitia CITE UP 2024</div>
-            <div class="grid-item">Sekretaris Departement Eksternal HMIK</div>
-            <div class="grid-item">Peserta lomba LIDM</div>
-            <div class="grid-item">Head of Division Public Relation Space UP7.0</div>
-            <div class="grid-item">Panitia AOT 2024</div>
-                   </div>
-    </section>
+    <!-- Feedback Form -->
+    <section id="form" class="max-w-2xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-custom text-xl font-semibold mb-3">Feedback</h2>
+        <form>
+            <label class="block mb-2">Nama:</label>
+            <input type="text" class="w-full p-2 border border-gray-300 rounded mb-4" required>
 
-    <!-- Section 4: Form Kontak -->
-    <section id="form">
-        <h2>Feedback</h2>
-        <form action="#" method="post">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <label class="block mb-2">Umur:</label>
+            <input type="number" class="w-full p-2 border border-gray-300 rounded mb-4" required>
 
-            <label for="age">Umur:</label>
-            <input type="number" id="age" name="age" min="1" required><br><br>
+            <label class="block mb-2">Email:</label>
+            <input type="email" class="w-full p-2 border border-gray-300 rounded mb-4" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <label class="block mb-2">Jenis Kelamin:</label>
+            <div class="flex items-center mb-4">
+                <input type="radio" name="gender" id="male" value="Laki-laki" class="mr-2" required>
+                <label for="male" class="mr-4">Laki-laki</label>
+                <input type="radio" name="gender" id="female" value="Perempuan" class="mr-2" required>
+                <label for="female">Perempuan</label>
+            </div>
 
-            <label for="gender">Jenis Kelamin:</label><br>
-            <input type="radio" id="male" name="gender" value="Laki-laki">
-            <label for="male">Laki-laki</label>
-            <input type="radio" id="female" name="gender" value="Perempuan">
-            <label for="female">Perempuan</label><br><br>
-            <label for="updates">Ingin menerima update:</label>
-            <input type="checkbox" id="updates" name="updates" value="yes"><br><br>
+            <label class="block mb-2">Pesan:</label>
+            <textarea class="w-full p-2 border border-gray-300 rounded mb-4" rows="4" required></textarea>
 
-            <label for="message">Pesan:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-            <button type="submit">Kirim</button>
+            <button type="submit" class="bg-custom text-white py-2 px-4 rounded hover-bg-custom">Kirim</button>
         </form>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Blog Amanda Weza Chania.</p>
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+        <p>&copy; 2024 Blog Amanda Weza Chania</p>
     </footer>
 </body>
 </html>
