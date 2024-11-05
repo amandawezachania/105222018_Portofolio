@@ -17,6 +17,10 @@
     <header class="bg-custom text-white text-center py-6">
         <h1 class="text-2xl font-bold">Selamat Datang di Portofolio Amanda Weza Chania</h1>
         <p>Blog ini berisi tentang informasi mengenai Amanda Weza Chania.</p>
+        <!-- Foto ditambahkan di bawah paragraf -->
+        <div class="flex justify-center mt-4">
+            <img src="fotoweza.jpg" alt="Foto Amanda Weza Chania" class="rounded-full w-32 h-32 object-cover">
+        </div>
         <nav class="bg-custom py-4">
             <ul class="flex justify-center space-x-4 text-white">
                 <li><a href="#Profile" class="hover:underline">Profile</a></li>
@@ -30,7 +34,7 @@
     <!-- Profile Section -->
     <section id="Profile" class="max-w-2xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
         <h2 class="text-custom text-xl font-semibold mb-3">Profile Terbaru</h2>
-        <p>Amanda Weza Chania, Seorang mahasiswa ilmu komputer angkatan 2022 di Universitas pertamina. Berasal dari latar belakang yang penuh semangat untuk belajar dan mengeksplorasi teknologi, Weza selalu terdorong untuk memahami lebih dalam mengenai perkembangan dunia digital, khususnya dalam bidang dunia pemograman web. Weza bercita-cita untuk menjadi seorang web developer yang tidak hanya mahir dalam teknis, tetapi juga mampu menciptakan solusi-solusi digital yang bermanfaat bagi masyarakat.</p>
+        <p>Amanda Weza Chania, Seorang mahasiswa ilmu komputer angkatan 2022 di Universitas Pertamina. Berasal dari latar belakang yang penuh semangat untuk belajar dan mengeksplorasi teknologi, Weza selalu terdorong untuk memahami lebih dalam mengenai perkembangan dunia digital, khususnya dalam bidang pemrograman web. Weza bercita-cita untuk menjadi seorang web developer yang tidak hanya mahir dalam teknis, tetapi juga mampu menciptakan solusi-solusi digital yang bermanfaat bagi masyarakat.</p>
     </section>
 
     <!-- Multimedia Section -->
@@ -42,7 +46,7 @@
         </audio>
         <h3 class="text-lg font-medium mt-6">Video: Lana Del Rey</h3>
         <video controls class="w-full mt-2">
-            <source src="Lana Del Reyy.mp4" type="video/mp4">
+            <source src="Lana Del Rey.mp4" type="video/mp4">
         </video>
     </section>
 
@@ -62,26 +66,18 @@
     <!-- Feedback Form -->
     <section id="form" class="max-w-2xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
         <h2 class="text-custom text-xl font-semibold mb-3">Feedback</h2>
-        <form>
+        <form onsubmit="validateForm(event)">
             <label class="block mb-2">Nama:</label>
-            <input type="text" class="w-full p-2 border border-gray-300 rounded mb-4" required>
-
-            <label class="block mb-2">Umur:</label>
-            <input type="number" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+            <input type="text" id="nama" class="w-full p-2 border border-gray-300 rounded mb-4" required>
 
             <label class="block mb-2">Email:</label>
-            <input type="email" class="w-full p-2 border border-gray-300 rounded mb-4" required>
+            <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded mb-4" required>
 
-            <label class="block mb-2">Jenis Kelamin:</label>
-            <div class="flex items-center mb-4">
-                <input type="radio" name="gender" id="male" value="Laki-laki" class="mr-2" required>
-                <label for="male" class="mr-4">Laki-laki</label>
-                <input type="radio" name="gender" id="female" value="Perempuan" class="mr-2" required>
-                <label for="female">Perempuan</label>
-            </div>
+            <label class="block mb-2">Nomor HP:</label>
+            <input type="text" id="nomorHp" class="w-full p-2 border border-gray-300 rounded mb-4" required>
 
             <label class="block mb-2">Pesan:</label>
-            <textarea class="w-full p-2 border border-gray-300 rounded mb-4" rows="4" required></textarea>
+            <textarea id="pesan" class="w-full p-2 border border-gray-300 rounded mb-4" rows="4" required></textarea>
 
             <button type="submit" class="bg-custom text-white py-2 px-4 rounded hover-bg-custom">Kirim</button>
         </form>
